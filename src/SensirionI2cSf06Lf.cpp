@@ -235,17 +235,12 @@ int16_t SensirionI2cSf06Lf::enterSleep() {
 }
 
 int16_t SensirionI2cSf06Lf::exitSleep() {
-    int16_t localError = NO_ERROR;
     uint8_t local_buffer[2] = {0};
     SensirionI2CTxFrame txFrame = SensirionI2CTxFrame::createWithUInt16Command(
         0x0, local_buffer, sizeof local_buffer);
-    localError =
-        SensirionI2CCommunication::sendFrame(_i2cAddress, txFrame, *_i2cBus);
-    if (localError != NO_ERROR) {
-        return localError;
-    }
+    SensirionI2CCommunication::sendFrame(_i2cAddress, txFrame, *_i2cBus);
     delay(25);
-    return localError;
+    return NO_ERROR;
 }
 
 int16_t SensirionI2cSf06Lf::readProductIdentifierPrepare() {
