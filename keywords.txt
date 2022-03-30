@@ -1,0 +1,42 @@
+#######################################
+# Syntax Coloring Map
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+SensirionI2cSf06Lf	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+readMeasurementData	KEYWORD2
+readThermalConductivityMeasurementData	KEYWORD2
+readProductIdentifier	KEYWORD2
+startH2oContinuousMeasurement	KEYWORD2
+startIpaContinuousMeasurement	KEYWORD2
+readMeasurementDataRaw	KEYWORD2
+stopContinuousMeasurement	KEYWORD2
+startSingleThermalConductivityMeasurementSync	KEYWORD2
+startSingleThermalConductivityMeasurementAsync	KEYWORD2
+llreadThermalConductivityMeasurementData	KEYWORD2
+enterSleep	KEYWORD2
+exitSleep	KEYWORD2
+readProductIdentifierPrepare	KEYWORD2
+llreadProductIdentifier	KEYWORD2
+signalFlow	KEYWORD2
+signalTemperature	KEYWORD2
+signalDeltaTemperature	KEYWORD2
+signalThermalConductivity	KEYWORD2
+
+#######################################
+# Instances (KEYWORD2)
+#######################################
+
+sensor	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
