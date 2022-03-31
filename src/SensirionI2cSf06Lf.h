@@ -63,8 +63,6 @@
 #define LD20_2600B_ADDR_A 0x08
 #define SF06_LF_I2C_ADDRESS 0x08
 
-// define enum with command ids
-
 typedef enum {
     START_H2O_CONTINUOUS_MEASUREMENT_CMD_ID = 0x3608,
     START_IPA_CONTINUOUS_MEASUREMENT_CMD_ID = 0x3615,
@@ -95,8 +93,6 @@ class SensirionI2cSf06Lf {
      * @param i2cBus Arduino stream object to be used for communication.
      */
     void begin(TwoWire& i2cBus, uint8_t i2cAddress);
-
-    // user-api functions
 
     /**
      * @brief read measured data
@@ -158,8 +154,6 @@ class SensirionI2cSf06Lf {
     int16_t readProductIdentifier(uint32_t& productIdentifier,
                                   uint8_t serialNumber[],
                                   uint16_t serialNumberSize);
-
-    // low-level-api functions
 
     /**
      * @brief Start continuous measurement mode for H₂O
@@ -357,8 +351,6 @@ class SensirionI2cSf06Lf {
   private:
     TwoWire* _i2cBus = nullptr;
     uint8_t _i2cAddress = 0;
-
-    // conversion functions
 
     /**
      * @brief signalFlow
