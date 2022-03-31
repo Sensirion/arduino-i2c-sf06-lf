@@ -27,6 +27,7 @@ support it are listed in the API description.
    - LD20-0600L
 
    - LD20-2600B
+
 The following instructions and examples use a *SLF3C-1300F*.Click [here](https://sensirion.com/media/documents/F3931025/621F8CCE/Sensirion_Liquid_Flow_Meters_SLF3C-1300F_Datasheet.pdf
 ) to download the datasheet.
 
@@ -35,7 +36,7 @@ The following instructions and examples use a *SLF3C-1300F*.Click [here](https:/
 
 ### Connecting the Sensor
 
-Your sensor has the four different connectors: VCC, GND, SDA, SCL. Use
+Your sensor has the four different connectors: VDD, GND, SDA, SCL. Use
 the following pins to connect your SF06-LF:
 
 <img src="images/SLF3x_Pinout.png" width="300px">
@@ -94,8 +95,8 @@ manager or `Add .ZIP Library`
 
 		File => Examples => Sensirion I2C SF06-LF => exampleUsage
 
-The example is configured to run with the default I2C address 0x08.
-   In case you need a different address change it in the code of `exampleUsage`. You find the list with pre-defined 
+   The example is configured to run with a SLF3C-1300F, I2C address 0x08.
+   In case you need a different address change it in the code of `examples/exampleUsage.ino`. You find the list with pre-defined 
    addresses for the supported sensors in the `src/SensirionI2CSf06Lf.h`.
 
 
