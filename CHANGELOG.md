@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+Names of defines for I2C addresses in SensirionI2cSf06Lf.h changed
+
 ## [0.1.0] - 2022-03-30
 
 Initial release
