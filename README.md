@@ -25,9 +25,9 @@ support it are listed in the API description.
 |[LD20-0600L](https://sensirion.com/products/catalog/LD20-0600L/)| **0x08**|
 |[LD20-2600B](https://sensirion.com/products/catalog/LD20-2600B/)| **0x08**|
 
+For instructions how to change the I2C address of your SLF3x sensor please refer to `examples/exampleI2cAddressChange/README.md`.
+
 The following instructions and examples use a *SLF3C-1300F*.
-
-
 
 ## Installation of the library
 
@@ -65,8 +65,6 @@ Use the following pin description to connect your SF06-LF to the standard I²C b
 | 4 | black | GND | Ground | 
 | 5 | yellow | SCL | I2C: Serial clock input | 
 | 6 |  | NC | Do not connect | 
-
-
 
 
 The recommended voltage is 3.3V.
