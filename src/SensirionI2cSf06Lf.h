@@ -60,7 +60,7 @@ typedef enum {
     EXIT_SLEEP_CMD_ID = 0x0,
     READ_PRODUCT_IDENTIFIER_PREPARE_CMD_ID = 0x367c,
     READ_PRODUCT_IDENTIFIER_CMD_ID = 0xe102,
-} CmdId;
+} Sf06LfCmdId;
 
 typedef enum {
     INV_FLOW_SCALE_FACTORS_SLF3C_1300F = 500,
@@ -69,7 +69,7 @@ typedef enum {
     INV_FLOW_SCALE_FACTORS_SLF3S_0600F = 10,
     INV_FLOW_SCALE_FACTORS_LD20_0600L = 1200,
     INV_FLOW_SCALE_FACTORS_LD20_2600B = 20,
-} InvFlowScaleFactors;
+} Sf06LfInvFlowScaleFactors;
 
 class SensirionI2cSf06Lf {
   public:
@@ -102,7 +102,7 @@ class SensirionI2cSf06Lf {
      *
      * @return error_code 0 on success, an error code otherwise.
      */
-    int16_t readMeasurementData(InvFlowScaleFactors invFlowScaleFactor,
+    int16_t readMeasurementData(Sf06LfInvFlowScaleFactors invFlowScaleFactor,
                                 float& aFlow, float& aTemperature,
                                 uint16_t& aSignalingFlags);
 
@@ -351,7 +351,8 @@ class SensirionI2cSf06Lf {
      * raw value is converted by: flow = raw_flow / inv_flow_scale_factor
      * Resulting unit depends on your specific sensor type.
      */
-    float signalFlow(int16_t rawFlow, InvFlowScaleFactors invFlowScaleFactor);
+    float signalFlow(int16_t rawFlow,
+                     Sf06LfInvFlowScaleFactors invFlowScaleFactor);
 
     /**
      * @brief signalTemperature

@@ -44,8 +44,8 @@ static uint8_t communication_buffer[18] = {0};
 SensirionI2cSf06Lf::SensirionI2cSf06Lf() {
 }
 
-float SensirionI2cSf06Lf::signalFlow(int16_t rawFlow,
-                                     InvFlowScaleFactors invFlowScaleFactor) {
+float SensirionI2cSf06Lf::signalFlow(
+    int16_t rawFlow, Sf06LfInvFlowScaleFactors invFlowScaleFactor) {
     float flow = 0.0;
     flow = (float)(rawFlow);
     flow = flow / (int)(invFlowScaleFactor);
@@ -71,10 +71,9 @@ SensirionI2cSf06Lf::signalThermalConductivity(int16_t rawThermalConductivity) {
     return thermalConductivity;
 }
 
-int16_t
-SensirionI2cSf06Lf::readMeasurementData(InvFlowScaleFactors invFlowScaleFactor,
-                                        float& aFlow, float& aTemperature,
-                                        uint16_t& aSignalingFlags) {
+int16_t SensirionI2cSf06Lf::readMeasurementData(
+    Sf06LfInvFlowScaleFactors invFlowScaleFactor, float& aFlow,
+    float& aTemperature, uint16_t& aSignalingFlags) {
     int16_t rawFlow = 0;
     int16_t rawTemp = 0;
     uint16_t signalingFlags = 0u;
