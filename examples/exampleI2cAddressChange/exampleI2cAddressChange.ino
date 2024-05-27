@@ -125,7 +125,9 @@ int16_t changeSensorAddress(TwoWire& wire, uint16_t newI2cAddress,
     // switch mode to input and listen to the pulse the sensor
     // sends 1500μs after the address change command to confirm the new I2C
     // address
-    pinMode(sensorIrqPin, INPUT_PULLDOWN);
+    // If your platform supports INPUT_PULLDOWN you should use it instead of
+    // INPUT. This is e.g. the case for ESP32.
+    pinMode(sensorIrqPin, INPUT);
     delayMicroseconds(500);
     uint8_t success = 0;
     uint16_t cnt = 0;
