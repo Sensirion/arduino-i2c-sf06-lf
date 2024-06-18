@@ -77,7 +77,7 @@ void i2c_soft_reset() {
  *   after the reset)
  * * PIN1 of the sensor for which you want to change the address must be
  *   connected to a GPIO pin
- * * Note that only sensors with a serial number above 22xxxxxxxx have the IRQn
+ * * Note that only sensors with a serial number above 23xxxxxxxx have the IRQn
  *   pin
  *
  * @note The I2C address is not configured permanently, you need to run the

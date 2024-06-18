@@ -60,7 +60,7 @@ sensors to the same pin on the ESP32 Board, you can for example use a Breadboard
 
 ## Limitations
 
-- The feature is only supported by SLF3x sensors with a serial number above 22xxxxxxxx.
+- The feature is only supported by SLF3x sensors with a serial number above 23xxxxxxxx.
 - After a soft or hard reset the  I²C address is set back to the default address 0x08. A soft reset is triggered by a speical I2C command, see `i2c_soft_reset()` in the example, and a hard reset is triggered by a power cylce of the sensor.
 
 ## Further readings
