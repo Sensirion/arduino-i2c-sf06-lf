@@ -186,12 +186,13 @@ class SensirionI2cSf06Lf {
      * results (flow, temperature, and signaling flags) can be read continuously
      * with this command.
      *
-     * @param[out] rawFlow For SLF3C-1300F, SLF3S-1300F convert to ml/min by
-     * applying: flow = raw_flow / 500 For SLF3S-4000B convert to ml/min by
-     * applying: flow = raw_flow / 32 For SLF3S-0600F convert to μl/min by
-     * applying: flow = raw_flow / 10 For LD20-0600L convert to ml/h by
-     * applying: flow = raw_flow / 1200 For LD20-2600B convert to ml/h by
-     * applying: flow = raw_flow / 20
+     * @param[out] rawFlow Convert to units by
+     * applying: flow = raw_flow / 500 For SLF3C-1300F convert to ml/min
+     * applying: flow = raw_flow / 500 For SLF3S-1300F convert to ml/min
+     * applying: flow = raw_flow / 32 For SLF3S-4000B convert to ml/min
+     * applying: flow = raw_flow / 10 For SLF3S-0600F convert to μl/min
+     * applying: flow = raw_flow / 1200 For LD20-0600L convert to ml/h
+     * applying: flow = raw_flow / 20 For LD20-2600B convert to ml/h
      * @param[out] rawTemperature Convert to degrees celsius by temperature =
      * raw_temperature / 200
      * @param[out] signalingFlags Gives additional information about the
