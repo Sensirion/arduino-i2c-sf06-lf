@@ -12,6 +12,12 @@ Not all sensors of this driver family support all measurements.
 In case a measurement is not supported by all sensors, the products that
 support it are listed in the API description.
 
+> [!IMPORTANT]
+> **This repository has been archived.**
+> 
+> Please use the new drivers for your sensor type:
+> - SLF3x: [Sensirion/arduino-i2c-slf3x](https://github.com/Sensirion/arduino-i2c-slf3x)
+> - LD20: [Sensirion/arduino-i2c-ld20](https://github.com/Sensirion/arduino-i2c-ld20)
 
 
 ## Supported sensor types
